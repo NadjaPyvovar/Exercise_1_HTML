@@ -1,22 +1,59 @@
+/*----------------GLOBAL STYLES----------------*/
+
 * {
-  margin: 0;
-  padding: 0;
   list-style: none;
   box-sizing: border-box;
 }
 
-
-
 body {
   font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  background-color: #fafafa;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1166px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto; /* to center the container */
 }
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+address {
+  font-style: normal;
 }
 
 .section-title {
@@ -27,8 +64,14 @@ a {
   text-transform: uppercase;
   text-align: center;
   color: #111;
+}
 
 /*----------------HEADER----------------*/
+
+.header {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
 
 .header-logo {
   font-weight: 700;
@@ -69,6 +112,12 @@ color: #fd9222 }
 
 .hero {
   background-color: #1e1823;
+  border-radius: 30px;
+  margin-bottom: 72px;
+}
+
+.hero-wrapper {
+  padding: 380px 40px 40px 40px;
 }
 
 .hero-title {
@@ -77,6 +126,9 @@ color: #fd9222 }
   line-height: 1.21;
   letter-spacing: -0.03em;
   color: #fff;
+  margin-bottom: 32px;
+  /*width: 484px; to fix the width of the title but its better to use not more than i.e. max-width*/
+  max-width: 484px;
 }
 
 .hero-btn {
@@ -102,6 +154,9 @@ color: #fd9222 }
 /*----------------SECTION FEATURES----------------*/
 
 .features {
+  background-color: #1e1823;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .features-list {
@@ -114,6 +169,7 @@ color: #fd9222 }
   font-weight: 600;
   font-size: 18px;
   color: #fff;
+  margin-bottom: 18px;
 }
 
 .features-text {
@@ -126,9 +182,14 @@ color: #fd9222 }
 /*----------------SECTION TASTE----------------*/
 
 .taste {
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 .taste-title {
+  max-width: 411px;
+  margin: 0 auto; /* to center the block */
+  margin-bottom: 28px;
 }
 
 .accent {
@@ -142,6 +203,9 @@ color: #fd9222 }
   letter-spacing: -0.02em;
   text-align: center;
   color: #111;
+  max-width: 486px;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .taste-list {
@@ -166,7 +230,6 @@ color: #fd9222 }
 .made {
 }
 .made-title {
-
 }
 .accent {
   color: #fd9222;
@@ -199,7 +262,6 @@ color: #fd9222 }
 .review {
 }
 .review-title {
-
 }
 
 .accent {
@@ -287,5 +349,3 @@ color: #fd9222 }
   letter-spacing: -0.02em;
   color: #fff;
 }
-
-
