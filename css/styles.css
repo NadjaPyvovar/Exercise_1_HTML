@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -278,3 +287,5 @@ color: #fd9222 }
   letter-spacing: -0.02em;
   color: #fff;
 }
+
+
