@@ -10,6 +10,7 @@ body {
   font-size: 16px;
   background-color: #fafafa;
 }
+/*body's width should be not fixed (maximised) in contrast to the width of the container with width or max-midth:xxxpx;*/
 
 .visually-hidden {
   position: absolute;
@@ -52,6 +53,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
 address {
   font-style: normal;
 }
@@ -73,16 +78,42 @@ address {
   padding-bottom: 28px;
 }
 
+.header .container {
+  display: flex;
+  align-items: center;
+  /*justify-content: space-between;*/
+}
+
+.header-navigation {
+  display: flex;
+}
+
 .header-logo {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
   letter-spacing: -0.03em;
   color: #111;
+  margin-right: 76px;
 }
 
 .header-logo-italic {
   font-style: italic;
+}
+
+.header-menu-list {
+  display: flex;
+  gap: 24px;
+}
+
+.header-contacts {
+  margin-left: auto;
+  /*to push contacts to the far right by absorbing free space, as in flexbox margin: auto absorbes all free space, i.e. here margin takes all free spaces left and pushes it to the left, comparable to space-between in .header .container, but space-between gives spaces between all elements */
+}
+
+.header-contacts-list {
+  display: flex;
+  gap: 24px;
 }
 
 .header-menu-link {
@@ -131,16 +162,33 @@ color: #fd9222 }
   max-width: 484px;
 }
 
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  /*gap: 14px; - gap and margins are conflicting, gaps are equal, but if the distance between the elements should be not equal but customised, i.e. one distance between the element 1 and 2 and another between 2 and 3, its better to use margin*/
+}
+
 .hero-btn {
   font-weight: 600;
   font-size: 14px;
   color: #fff;
+  padding: 14px 40px;
+  /* If the btn changes it sizes depending on the content insight, i.e. text, than it is better to define paddings, otherwise height and width can be given as fixed
+  height: 46px;
+  min-width: 146px; */
+  margin-right: 14px;
+  background-color: #fd9222;
+  border: none;
+  border-radius: 100px;
 }
 
 .hero-anchor-btn {
   font-weight: 600;
   font-size: 14px;
   color: #fff;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  padding: 14px 40px;
 }
 
 .hero-scroll-btn {
@@ -149,6 +197,7 @@ color: #fd9222 }
   line-height: 1.29;
   letter-spacing: -0.03em;
   color: #fff;
+  margin-left: auto;
 }
 
 /*----------------SECTION FEATURES----------------*/
@@ -160,9 +209,15 @@ color: #fd9222 }
 }
 
 .features-list {
+  display: flex;
+  gap: 70px;
+  padding-left: 36px;
+  padding-right: 36px;
 }
 
 .features-item {
+  width: calc((100% - 140px) / 3);
+  /*to give the same width to the elements, the formula calc is used to calculate the equal width, here 100% of width minus width of gaps (here 2 gaps between the elements each 70px), and this diveded by the number of elements, here 3 */
 }
 
 .features-subtitle {
@@ -209,20 +264,31 @@ color: #fd9222 }
 }
 
 .taste-list {
+  display: flex;
+  gap: 19px;
+  /* column-gap: 19px;
+  row-gap: 32px; - if flex-wrap: wrap and different gaps vertical and horizontal between the lines */
 }
 
 .taste-list-item {
+  border: 1px solid #fd9222;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 27px 31px;
+  width: calc((100% - 57px) / 4);
 }
 
 .taste-image {
+  margin-bottom: 36px;
 }
+
 .taste-subtitle {
   font-weight: 600;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: #fff;
+  /*color: #fff;*/
 }
 
 /*----------------SECTION MADE----------------*/
