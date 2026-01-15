@@ -64,6 +64,10 @@ address {
   font-style: normal;
 }
 
+button {
+  cursor: pointer;
+}
+
 .section-title {
   font-weight: 600;
   font-size: 24px;
@@ -195,6 +199,16 @@ color: #fd9222 }
   background-color: #fd9222;
   border: none;
   border-radius: 100px;
+  /*transition features will be given not to the hover but to the element to which hover is applied*/
+  transition-property: background-color, color;
+  transition-duration: 300ms;
+  transition-delay: 100ms;
+  transition-timing-function: linear;
+
+  &:hover {
+    background-color: #fcf1e8;
+    color: #fd9222;
+  }
 }
 
 .hero-anchor-btn {
@@ -293,8 +307,12 @@ color: #fd9222 }
   width: calc((100% - 57px) / 4);
 }
 
-.taste-image {
-  margin-bottom: 36px;
+.taste-list-item:hover .taste-item-text {
+  transform: translateY(0);
+}
+
+.taste .taste-image {
+  *margin-bottom: 36px;
 }
 
 .taste-subtitle {
@@ -304,6 +322,27 @@ color: #fd9222 }
   letter-spacing: -0.02em;
   text-transform: uppercase;
   /*color: #fff;*/
+}
+
+.taste-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.taste-item-text {
+  position: absolute;
+  top: 0;
+  padding: 27px 31px;
+  /*padding: 20px;*/
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  background-color: #fd9222;
+  border-radius: 15px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
 }
 
 /*----------------SECTION MADE----------------*/
